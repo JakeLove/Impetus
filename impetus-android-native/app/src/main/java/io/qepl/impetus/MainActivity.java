@@ -1,11 +1,15 @@
 package io.qepl.impetus;
 
+import io.qepl.impetus.PromptQueue;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import androidx.appcompat.app.ActionBar;
 
 public class MainActivity extends AppCompatActivity {
+
+    private PromptQueue promptQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,5 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        this.promptQueue = new PromptQueue(this);
     }
 }
