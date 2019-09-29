@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Impetus</string>
+    <string name="txt_0">0</string>
+    <string name="txt_1">1</string>
+    <string name="txt_2">2</string>
+    <string name="txt_3">3</string>
+    <string name="txt_4">4</string>
+    <string name="txt_5">5</string>
+    <string name="txt_6">6</string>
+    <string name="txt_7">7</string>
+    <string name="txt_8">8</string>
+    <string name="txt_9">9</string>
+    <string name="host">http://127.0.0.1:5000</string>
 </resources>

@@ -4,15 +4,378 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E6F1F3"
     tools:context=".MainActivity">
 
-    <TextView
+    <TableLayout
+        android:layout_width="343dp"
+        android:layout_height="431dp"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPin1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:height="95dp"
+                android:fontFamily="@font/lato_light"
+                android:maxWidth="70dp"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                android:outlineProvider="none"
+                android:shadowColor="#005F1515"
+                android:shadowRadius="0"
+                android:text="@string/txt_1"
+                android:textColor="#677174"
+                android:textColorHint="#00811C1C"
+                android:textSize="30sp"
+                app:backgroundTint="#E6F1F3"
+                app:rippleColor="#BED4D6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPin2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:height="95dp"
+                android:fontFamily="@font/lato_light"
+                android:maxWidth="70dp"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                android:outlineProvider="none"
+                android:shadowColor="#005F1515"
+                android:shadowRadius="0"
+                android:text="@string/txt_2"
+                android:textColor="#677174"
+                android:textColorHint="#00811C1C"
+                android:textSize="30sp"
+                app:backgroundTint="#E6F1F3"
+                app:rippleColor="#BED4D6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPin3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:height="95dp"
+                android:fontFamily="@font/lato_light"
+                android:maxWidth="70dp"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                android:outlineProvider="none"
+                android:shadowColor="#005F1515"
+                android:shadowRadius="0"
+                android:text="@string/txt_3"
+                android:textColor="#677174"
+                android:textColorHint="#00811C1C"
+                android:textSize="30sp"
+                app:backgroundTint="#E6F1F3"
+                app:rippleColor="#BED4D6" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPin4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:height="95dp"
+                android:fontFamily="@font/lato_light"
+                android:maxWidth="70dp"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                android:outlineProvider="none"
+                android:shadowColor="#005F1515"
+                android:shadowRadius="0"
+                android:text="@string/txt_4"
+                android:textColor="#677174"
+                android:textColorHint="#00811C1C"
+                android:textSize="30sp"
+                app:backgroundTint="#E6F1F3"
+                app:rippleColor="#BED4D6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPin5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:height="95dp"
+                android:fontFamily="@font/lato_light"
+                android:maxWidth="70dp"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                android:outlineProvider="none"
+                android:shadowColor="#005F1515"
+                android:shadowRadius="0"
+                android:text="@string/txt_5"
+                android:textColor="#677174"
+                android:textColorHint="#00811C1C"
+                android:textSize="30sp"
+                app:backgroundTint="#E6F1F3"
+                app:rippleColor="#BED4D6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPin6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:height="95dp"
+                android:fontFamily="@font/lato_light"
+                android:maxWidth="70dp"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                android:outlineProvider="none"
+                android:shadowColor="#005F1515"
+                android:shadowRadius="0"
+                android:text="@string/txt_6"
+                android:textColor="#677174"
+                android:textColorHint="#00811C1C"
+                android:textSize="30sp"
+                app:backgroundTint="#E6F1F3"
+                app:rippleColor="#BED4D6" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="89dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPin7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:height="95dp"
+                android:fontFamily="@font/lato_light"
+                android:maxWidth="70dp"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                android:outlineProvider="none"
+                android:shadowColor="#005F1515"
+                android:shadowRadius="0"
+                android:text="@string/txt_7"
+                android:textColor="#677174"
+                android:textColorHint="#00811C1C"
+                android:textSize="30sp"
+                app:backgroundTint="#E6F1F3"
+                app:rippleColor="#BED4D6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPin8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:height="95dp"
+                android:fontFamily="@font/lato_light"
+                android:maxWidth="70dp"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                android:outlineProvider="none"
+                android:shadowColor="#005F1515"
+                android:shadowRadius="0"
+                android:text="@string/txt_8"
+                android:textColor="#677174"
+                android:textColorHint="#00811C1C"
+                android:textSize="30sp"
+                app:backgroundTint="#E6F1F3"
+                app:rippleColor="#BED4D6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPin9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:height="95dp"
+                android:fontFamily="@font/lato_light"
+                android:maxWidth="70dp"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                android:outlineProvider="none"
+                android:shadowColor="#005F1515"
+                android:shadowRadius="0"
+                android:text="@string/txt_9"
+                android:textColor="#677174"
+                android:textColorHint="#00811C1C"
+                android:textSize="30sp"
+                app:backgroundTint="#E6F1F3"
+                app:rippleColor="#BED4D6" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="85dp">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPin0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="3dp"
+                android:height="95dp"
+                android:fontFamily="@font/lato_light"
+                android:maxWidth="70dp"
+                android:minWidth="70dp"
+                android:minHeight="70dp"
+                android:outlineProvider="none"
+                android:shadowColor="#005F1515"
+                android:shadowRadius="0"
+                android:text="@string/txt_0"
+                android:textColor="#677174"
+                android:textColorHint="#00811C1C"
+                android:textSize="30sp"
+                app:backgroundTint="#E6F1F3"
+                app:rippleColor="#BED4D6" />
+        </TableRow>
+
+    </TableLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="273dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="102dp" />
+
+    <LinearLayout
+        android:layout_width="351dp"
+        android:layout_height="71dp"
+        android:orientation="horizontal"
+        android:outlineProvider="none"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/textPrompt0"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:autofillHints="false"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="@font/lato_light"
+            android:hint="@string/txt_0"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="#677174"
+            android:textColorHint="#0D677174"
+            android:textSize="50sp" />
+
+        <EditText
+            android:id="@+id/textPrompt1"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:autofillHints="false"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="@font/lato_light"
+            android:hint="@string/txt_0"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="#33677174"
+            android:textColorHint="#0D677174"
+            android:textSize="50sp" />
+
+        <EditText
+            android:id="@+id/textPrompt2"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:autofillHints="false"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="@font/lato_light"
+            android:hint="@string/txt_0"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="#33677174"
+            android:textColorHint="#0D677174"
+            android:textSize="50sp" />
+
+        <EditText
+            android:id="@+id/textPrompt3"
+            android:hint="@string/txt_0"
+            android:autofillHints="false"
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="@font/lato_light"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="#33677174"
+            android:textColorHint="#0D677174"
+            android:textSize="50sp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
