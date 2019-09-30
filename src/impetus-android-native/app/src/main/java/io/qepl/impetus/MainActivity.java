@@ -17,8 +17,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final Uri HOST = Uri.parse("http://localhost/log");
-
     private String latestEntry;
 
     private SensorLogger sensorLogger;
