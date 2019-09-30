@@ -41,7 +41,7 @@ class Mailman {
 
     }
 
-    public void deliver(ArrayList<SensorEvent> sensorEvents, String entry, String url) {
+    public void deliver(ArrayList<SensorEventData> sensorEvents, String entry, String url) {
 
         JSONObject parcel = new JSONObject();
 
@@ -49,11 +49,11 @@ class Mailman {
 
             JSONArray sensorLog = new JSONArray();
 
-            for (SensorEvent sensorEvent: sensorEvents) {
+            for (SensorEventData sensorEvent: sensorEvents) {
 
                 JSONObject eventData = new JSONObject();
                 eventData.put("t", sensorEvent.timestamp);
-                eventData.put("sensor", sensorEvent.sensor.getStringType());
+                eventData.put("sensor", sensorEvent.sensorName);
                 eventData.put("values", new JSONArray(sensorEvent.values));
 
                 sensorLog.put(eventData);
@@ -72,6 +72,7 @@ class Mailman {
     }
 
     private StringRequest post(JSONObject JSONbody, String url) {
+
         final String requestBody = JSONbody.toString();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,

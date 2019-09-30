@@ -12,7 +12,7 @@ public class SensorLogger implements SensorEventListener{
     
     private Boolean isLogging = false;
 
-    private ArrayList<SensorEvent> sensorLog;
+    private ArrayList<SensorEventData> sensorLog;
 
 
     SensorLogger(Context context) {
@@ -29,7 +29,7 @@ public class SensorLogger implements SensorEventListener{
         reset();
     }
 
-    ArrayList<SensorEvent> finishLogging() {
+    ArrayList<SensorEventData> finishLogging() {
 
         isLogging = false;
 
@@ -55,7 +55,7 @@ public class SensorLogger implements SensorEventListener{
 
         if(isLogging) {
 
-            sensorLog.add(event);
+            sensorLog.add(new SensorEventData(event));
 
         }
 
