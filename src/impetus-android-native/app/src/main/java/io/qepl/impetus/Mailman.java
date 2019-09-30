@@ -60,7 +60,7 @@ class Mailman {
             }
 
             parcel.put("entry", entry);
-            parcel.put("sensors", sensorLog);
+            parcel.put("log", sensorLog);
 
         } catch (JSONException e) {
             Log.e("ERROR", "uhoh");

@@ -1,21 +1,27 @@
 import os
+import time
+import json
 
 from flask import Flask
 from flask import request
 
-DATA_DIR = 'sensor_data'
+DATA_DIR = './sensor_data/'
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
+
     return 'Hello, World!'
 
 
 @app.route('/sensorfeed', methods=['POST'])
 def sensorfeed():
-    print(request.json)
+
+    with open(DATA_DIR + str(time.time()) + ".txt", "w") as file:
+        file.write(request.data.decode("utf-8"))
+
     return 'Hello, World!'
 
 

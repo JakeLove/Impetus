@@ -33,9 +33,6 @@ public class PromptQueue {
 
     private void updatePrompt() {
 
-        Log.e("HELLO", "updatePrompt: ");
-
-
         EditText prompt0 = ((Activity)context).findViewById(R.id.textPrompt0);
         prompt0.setText(String.format(Locale.ENGLISH, "%d",valueQueue[0]));
 
