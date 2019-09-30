@@ -5,7 +5,7 @@ import json
 from flask import Flask
 from flask import request
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), '../../data/sensor-feed/')
+import config
 
 app = Flask(__name__)
 
@@ -19,9 +19,9 @@ def index():
 @app.route('/sensorfeed', methods=['POST'])
 def sensorfeed():
 
-    print(DATA_DIR + str(time.time()) + ".txt")
+    print(config.SENSOR_FEED_DIR + str(time.time()) + ".txt")
 
-    with open(DATA_DIR + str(time.time()) + ".txt", "w") as file:
+    with open(config.SENSOR_FEED_DIR + str(time.time()) + ".txt", "w") as file:
         file.write(request.data.decode("utf-8"))
 
     return 'Hello, World!'
@@ -29,8 +29,8 @@ def sensorfeed():
 
 def main():
 
-    if not os.path.exists(DATA_DIR):
-        os.makedirs(DATA_DIR)
+    if not os.path.exists(config.SENSOR_FEED_DIR):
+        os.makedirs(config.SENSOR_FEED_DIR)
 
     app.run(host='0.0.0.0', port=1066)
 
