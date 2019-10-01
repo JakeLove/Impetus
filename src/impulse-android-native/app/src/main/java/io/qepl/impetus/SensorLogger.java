@@ -6,13 +6,15 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
-public class SensorLogger implements SensorEventListener{
+class SensorLogger implements SensorEventListener{
     
     private Boolean isLogging = false;
 
-    private ArrayList<SensorEventData> sensorLog;
+    private SensorLog sensorLog;
 
 
     SensorLogger(Context context) {
@@ -29,11 +31,11 @@ public class SensorLogger implements SensorEventListener{
         reset();
     }
 
-    ArrayList<SensorEventData> finishLogging() {
+    JSONObject finishLogging() {
 
         isLogging = false;
 
-        return sensorLog;
+        return sensorLog.getJSON();
 
     }
 
@@ -46,7 +48,7 @@ public class SensorLogger implements SensorEventListener{
 
     void reset() {
 
-        sensorLog = new ArrayList<>();
+        sensorLog = new SensorLog();
 
     }
 
@@ -55,7 +57,7 @@ public class SensorLogger implements SensorEventListener{
 
         if(isLogging) {
 
-            sensorLog.add(new SensorEventData(event));
+            sensorLog.update(event);
 
         }
 

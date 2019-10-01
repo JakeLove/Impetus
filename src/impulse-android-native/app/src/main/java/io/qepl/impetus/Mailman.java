@@ -41,39 +41,24 @@ class Mailman {
 
     }
 
-    public void deliver(ArrayList<SensorEventData> sensorEvents, String entry, String url) {
 
-        JSONObject parcel = new JSONObject();
+    void deliver(JSONObject log, String entry, String url) {
 
         try {
-
-            JSONArray sensorLog = new JSONArray();
-
-            for (SensorEventData sensorEvent: sensorEvents) {
-
-                JSONObject eventData = new JSONObject();
-                eventData.put("t", sensorEvent.timestamp);
-                eventData.put("sensor", sensorEvent.sensorName);
-                eventData.put("values", new JSONArray(sensorEvent.values));
-
-                sensorLog.put(eventData);
-            }
-
-            parcel.put("entry", entry);
-            parcel.put("log", sensorLog);
-
+            log.put("entry", entry);
         } catch (JSONException e) {
-            Log.e("ERROR", "uhoh");
+            Log.e("UH OH", "UH OH");
         }
 
 
-        requestQueue.add(post(parcel, url));
+        requestQueue.add(post(log.toString(), url));
 
     }
 
-    private StringRequest post(JSONObject JSONbody, String url) {
 
-        final String requestBody = JSONbody.toString();
+    private StringRequest post(String body, String url) {
+
+        final String requestBody = body;
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
 

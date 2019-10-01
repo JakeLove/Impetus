@@ -10,6 +10,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void handleTouchUp() {
 
-        ArrayList<SensorEventData> sensorLog = sensorLogger.finishLogging();
+        JSONObject sensorLog = sensorLogger.finishLogging();
         sensorLogger.reset();
 
         mailman.deliver(sensorLog, latestEntry, "http://192.168.1.12:1066/sensorfeed");
