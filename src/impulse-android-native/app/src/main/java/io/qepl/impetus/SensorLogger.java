@@ -16,20 +16,27 @@ class SensorLogger implements SensorEventListener{
 
     private SensorLog sensorLog;
 
+    private ArrayList<String> sensorsToUseNames = new ArrayList<>();
 
-    SensorLogger(Context context) {
+
+    SensorLogger(Context context, int[] sensorTypes) {
 
         int sensorDelay = SensorManager.SENSOR_DELAY_FASTEST;
-        int[] sensorTypes = {Sensor.TYPE_LINEAR_ACCELERATION, Sensor.TYPE_ACCELEROMETER, Sensor.TYPE_ORIENTATION, Sensor.TYPE_GYROSCOPE};
 
         android.hardware.SensorManager manager = (SensorManager)context.getSystemService(Context.SENSOR_SERVICE);
 
         for (int sensorType: sensorTypes) {
-            manager.registerListener(this, manager.getDefaultSensor(sensorType), sensorDelay);
+
+            Sensor defaultSensor = manager.getDefaultSensor(sensorType);
+
+            manager.registerListener(this, defaultSensor, sensorDelay);
+            sensorsToUseNames.add(defaultSensor.getStringType());
+
         }
 
         reset();
     }
+
 
     JSONObject finishLogging() {
 
@@ -38,6 +45,7 @@ class SensorLogger implements SensorEventListener{
         return sensorLog.getJSON();
 
     }
+
 
     void startLogging() {
 
@@ -48,7 +56,7 @@ class SensorLogger implements SensorEventListener{
 
     void reset() {
 
-        sensorLog = new SensorLog();
+        sensorLog = new SensorLog(sensorsToUseNames);
 
     }
 

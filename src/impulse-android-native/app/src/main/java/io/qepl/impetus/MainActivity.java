@@ -3,8 +3,7 @@ package io.qepl.impetus;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.ActionBar;
 
-import android.hardware.SensorEvent;
-import android.net.Uri;
+import android.hardware.Sensor;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -12,12 +11,13 @@ import android.widget.Button;
 
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    private final int[] sensorsToUse = {Sensor.TYPE_LINEAR_ACCELERATION, Sensor.TYPE_ACCELEROMETER, Sensor.TYPE_ORIENTATION, Sensor.TYPE_GYROSCOPE};
 
     private String latestEntry;
 
@@ -34,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-
-        sensorLogger = new SensorLogger(this);
+        sensorLogger = new SensorLogger(this, sensorsToUse);
         promptQueue = new PromptQueue(this);
         mailman = new Mailman(this);
 
