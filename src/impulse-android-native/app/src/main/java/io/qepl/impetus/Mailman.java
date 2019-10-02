@@ -44,14 +44,17 @@ class Mailman {
 
     void deliver(JSONObject log, String entry, String url) {
 
+        JSONObject res = new JSONObject();
+
         try {
-            log.put("entry", entry);
+            res.put("entry", entry);
+            res.put("sensor_log", log);
         } catch (JSONException e) {
             Log.e("UH OH", "UH OH");
         }
 
 
-        requestQueue.add(post(log.toString(), url));
+        requestQueue.add(post(res.toString(), url));
 
     }
 
