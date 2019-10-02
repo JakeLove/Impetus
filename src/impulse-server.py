@@ -21,10 +21,11 @@ def index():
 @app.route('/sensorfeed', methods=['POST'])
 def sensorfeed():
 
-    print(config.SENSOR_FEED_DIR + str(time.time()) + ".txt")
+    fp = config.SENSOR_FEED_DIR + str(time.time()) + ".json"
 
-    with open(config.SENSOR_FEED_DIR + str(time.time()) + ".txt", "w") as file:
+    with open(fp, "w") as file:
         file.write(request.data.decode("utf-8"))
+        print("saved to: ", fp)
 
     return 'Hello, World!'
 
