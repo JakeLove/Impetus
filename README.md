@@ -13,7 +13,7 @@ Impetus aims to demonstrate this by capturing temporal data from the orientation
 - Currently, the dataset I am using was trained and tested on people who hold and enter their PIN with a single hand. 
 - Currently, the dataset requires to know when the device was touched (data from the sensors begins being collected on when the screen is touched). However, I believe that given a continuous signal of motion sensor data touch events could be recognised using traditional signal processing methods.
 
-# 1st iteration
+# Classification Approach
 
 Sensor data was collected from 4 people (trainset) and testing on 4 people (test set) 
 
