@@ -17,7 +17,7 @@ Impetus aims to demonstrate this by capturing temporal data from the orientation
 
 Sensor data was collected from 4 people (trainset) and testing on 4 people (test set) 
 
-My initial approach was to look at the problem as a classification problem. Each PIN entry was a discrete value out of 10 possible categories. For each PIN digit entry, I had a set of temporal data, 12 time-series (4 sensors with 3 dimensions each. To classify this kind of data I looked into two options. Echo state networks for signal classification and then sequential neural networks using various signal features and statistics for the input layer.
+My initial approach was to look at the problem as a classification problem. Each PIN entry was a discrete value out of 10 possible categories. For each PIN digit entry, I had a set of temporal data, 12 time-series (4 sensors with 3 dimensions each. To classify this kind of data I looked into two options. Echo state networks for signal classification, then sequential neural networks using various signal features and statistics for the input layer.
 
 Initial Classification:
 
