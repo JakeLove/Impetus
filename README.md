@@ -10,8 +10,9 @@ Impetus aims to demonstrate this by capturing temporal data from the orientation
 
 # Limitations
 
-- Currently, the dataset I am using was trained and tested on people who hold and enter their PIN with a single hand. 
-- Currently, the dataset requires to know when the device was touched (data from the sensors begins being collected on when the screen is touched). However, I believe that given a continuous signal of motion sensor data touch events could be recognised using traditional signal processing methods.
+- The dataset I am using was trained and tested on people who hold and enter their PIN with a single hand. 
+- The model requires to know when the device was touched (data from the sensors begins being collected on when the screen is touched). However, I believe that given a continuous signal of motion sensor data touch events could be recognised using traditional signal processing methods.
+- The dataset was trained a single mobile phone, different sizes and weights of phones almost certainly effect how a user holds one.
 
 # Classification Approach
 
@@ -62,11 +63,11 @@ Initial Classification:
     Model accuracy: 76.40%
     Model loss: 0.58180064445501
 
-No hyperparameters were tuned at this stage, the model parameters have been picked pretty much at random. The ESN performs a little better than the NN but not significantly. The accuracy displayed is the accuracy for a single digit of the PIN, so an 80% accuracy to classify a single-digit results in approx a 40% accuracy to classify the entire PIN. Not mind-blowing, but significantly better than 0.01% by random guess.
+No hyperparameters were tuned at this stage, the model parameters have been picked pretty much at random. If the dataset was larger I would claim that the ESN performs a little better than the NN, but it isn't. The accuracy displayed is the accuracy for a single digit of the PIN, so an 80% accuracy to classify a single-digit results in approx a 40% accuracy to classify the entire PIN. Not mind-blowing, but significantly better than 0.01% by random guess.
 
 # Improvements
 
 - Train and test on a much larger range of people
 - Tune those hyperparameters.
-- Look at treating the problem as a regression problem (how far left/right was the press, how far up/down) then bin the values into categories.
+- Look at treating the problem as a regression problem (how far left/right was the press, how far up/down) then decode these values to PIN locations.
 - Remove the need to know the touch even timings
