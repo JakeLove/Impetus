@@ -12,7 +12,7 @@ Impetus aims to demonstrate this by capturing temporal data from the orientation
 
 - The dataset I am using was trained and tested on people who hold and enter their PIN with a single hand. 
 - The model requires to know when the device was touched (data from the sensors begins being collected on when the screen is touched). However, I believe that given a continuous signal of motion sensor data touch events could be recognised using traditional signal processing methods.
-- The dataset was trained a single mobile phone, different sizes and weights of phones almost certainly effect how a user holds one.
+- The dataset was trained from a single mobile phone, different sizes and weights of phones almost certainly effect how a user holds one.
 
 # Classification Approach
 
@@ -68,6 +68,5 @@ No hyperparameters were tuned at this stage, the model parameters have been pick
 # Improvements
 
 - Train and test on a much larger range of people
-- Tune those hyperparameters.
 - Look at treating the problem as a regression problem (how far left/right was the press, how far up/down) then decode these values to PIN locations.
-- Remove the need to know the touch even timings
+- Look at classifying the relationship between sequential inputs. Is it easier to guess a 4 sequential inputs than 4 randomly selected ones?
